@@ -1,7 +1,7 @@
 <!DOCTYPE html public "Gerard Braad"> 
 <html manifest="cache.manifest">
     <head>
-        <title>GAuth</title>
+        <title>GAuth | CMSZ001</title>
         <meta charset="utf-8">
         <meta name="description" content="GAuth Authenticator">
         <meta name="HandheldFriendly" content="True">
@@ -28,9 +28,9 @@
         <section data-role="panel" id="panel" data-position="left" data-theme="a" data-display="overlay">
             <ul data-role="listview">
                 <li><a id="panelheader" href="#main" data-rel="close">&nbsp;</a></li>
-                <li data-l10n-id="menu-keys" data-icon="lock"><a href="#main" data-rel="close">Keys</a></li>
-                <li data-l10n-id="menu-settings" data-icon="gear"><a href="#settings" data-rel="close">Settings</a></li>
-                <li data-l10n-id="menu-about" data-icon="info"><a href="#about" data-rel="close">About</a></li>
+                <li data-l10n-id="menu-keys" data-icon="lock"><a href="#main" data-rel="close">密码</a></li>
+                <li data-l10n-id="menu-settings" data-icon="gear"><a href="#settings" data-rel="close">设置</a></li>
+                <li data-l10n-id="menu-about" data-icon="info"><a href="#about" data-rel="close">关于</a></li>
             </ul>
         </section>
 
@@ -43,53 +43,53 @@
 
             <div data-role="content">
                 <ul data-role="listview" data-inset="true" data-theme="a" data-split-theme="a" data-split-icon="delete" id="accounts">
-                    <li id="accountsHeader" data-l10n-id="title-keys" data-role="list-divider">One-time passwords<span class="ui-li-count" id='updatingIn'>..</span></li>
+                    <li id="accountsHeader" data-l10n-id="title-keys" data-role="list-divider">一次性密码<span class="ui-li-count" id='updatingIn'>..</span></li>
                 </ul>
 
-                <a id="addButton" data-l10n-id="keys-add" href="#add" data-role="button" class="ui-btn ui-icon-plus ui-btn-icon-left">Add</a>
+                <a id="addButton" data-l10n-id="keys-add" href="#add" data-role="button" class="ui-btn ui-icon-plus ui-btn-icon-left">添加账号</a>
             </div>
         </section>
 
         <section data-role="page" id="add" data-theme="a">
             <header data-role="header">
-                <h1 data-l10n-id="title-add">Add account</h1>
-                <a href="#panel" class="header-icon" data-l10n-id="header-menu" data-role="button" data-iconpos="notext" data-icon="bars" data-iconpos="notext">Menu</a>
+                <h1 data-l10n-id="title-add">添加账号</h1>
+                <a href="#panel" class="header-icon" data-l10n-id="header-menu" data-role="button" data-iconpos="notext" data-icon="bars" data-iconpos="notext">菜单</a>
             </header>
             <div data-role="content">
                 <div>
                     <form>
-                        <label data-l10n-id="add-name" for="keyAccount">Account name:</label>
+                        <label data-l10n-id="add-name" for="keyAccount">账户名：</label>
                         <input type="text" name="keyAccount" id="keyAccount" value="" autocorrect="off" autocapitalize="off" />
-                        <label data-l10n-id="add-secret" for="keySecret">Secret key:</label>
+                        <label data-l10n-id="add-secret" for="keySecret">密钥：</label>
                         <input type="text" name="keySecret" id="keySecret" value="" autocorrect="off" autocapitalize="off" />
                     </form>
                 </div>
                 <div data-role="controlgroup" data-type="horizontal">
-                    <a id="addKeyButton" data-l10n-id="keys-add" data-role="button" class="ui-btn ui-icon-plus ui-btn-icon-left">Add</a>
-                    <a id="addKeyCancel" data-l10n-id="add-cancel" href="#main" data-role="button" data-rel="back">Cancel</a>
+                    <a id="addKeyButton" data-l10n-id="keys-add" data-role="button" class="ui-btn ui-icon-plus ui-btn-icon-left">添加</a>
+                    <a id="addKeyCancel" data-l10n-id="add-cancel" href="#main" data-role="button" data-rel="back">取消</a>
                 </div>
             </div>
         </section>
 
         <section data-role="page" id="settings" data-theme="a">
             <header data-role="header">
-                <h1 data-l10n-id="title-settings">Settings</h1>
+                <h1 data-l10n-id="title-settings">设置</h1>
                 <a data-l10n-id="header-menu" href="#panel" class="header-icon" data-role="button" data-iconpos="notext" data-icon="bars" data-iconpos="notext">Menu</a>
             </header>
             <div data-role="content">
                 <p>
-                    <a id="export" data-l10n-id="settings-export" data-role="button" data-theme="a">Export keys</a>
+                    <a id="export" data-l10n-id="settings-export" data-role="button" data-theme="a">导出密码</a>
                 </p>
             </div>
         </section>
 
         <section data-role="page" id="about" data-theme="a">
             <header data-role="header">
-                <h1 data-l10n-id="title-about">About</h1>
+                <h1 data-l10n-id="title-about">关于</h1>
                 <a href="#panel" class="header-icon" data-l10n-id="header-menu" data-role="button" data-iconpos="notext" data-icon="bars" data-iconpos="notext">Menu</a>
             </header>
             <div data-role="content">
-                <p>A simple application for multi-factor authentication, written in HTML using jQuery Mobile (and PhoneGap), jsSHA and LocalStorage</p>
+                <p>一个用于2FA身份验证的简单应用程序，使用jQueryMobile（和PhoneGap）、jsSHA和LocalStorage以HTML编写，无后端。</p>
                 <p><ul>
                     <li>Learn why<br/><a target=”_blank” href="http://lifehacker.com/5932700/please-turn-on-two+factor-authentication">Please, turn on two-factor authentication</a></li>
                     <li>Online<br/><a target=”_blank” href="http://gauth.acmsz.top/">http://gauth.acmsz.top/</a></li>
